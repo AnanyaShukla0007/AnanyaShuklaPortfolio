@@ -1,0 +1,258 @@
+{
+  "name": {
+    "first": "Ananya",
+    "last": "Shukla",
+    "full": "Ananya Shukla"
+  },
+  "email": "ananyashukla0307@gmail.com",
+  "tagline": "Building production systems at the intersection of .NET Full Stack and AI/ML.",
+  "description": "B.Tech CSE (AI/ML) graduate with production-level experience in .NET Full Stack engineering and Artificial Intelligence. Capgemini alumna. Ships clean, tested, deployed code.",
+  "roles": {
+    "short": "Software Engineer",
+    "detailed": ".NET Full Stack Engineer \u00b7 AI/ML Developer \u00b7 Data Analyst"
+  },
+  "location": {
+    "based": "Agra, India",
+    "availability": "India / Remote"
+  },
+  "available": true,
+  "bio": "B.Tech graduate in Computer Science (AI/ML) with production-level experience in .NET Full Stack engineering \u2014 ASP.NET Core, Angular, Docker, AWS, CI/CD \u2014 and Artificial Intelligence, including LLMs, RAG pipelines, CNNs, and LangChain. Delivered two deployed applications, three AI/ML projects, and contributed to enterprise systems at Capgemini. Brings precision engineering habits \u2014 SOLID design, unit testing, API documentation \u2014 alongside the ability to move fast on ambiguous problems. Led GLA University's largest student club while shipping code.",
+  "stats": [
+    {
+      "value": "3",
+      "label": "Internships"
+    },
+    {
+      "value": "5+",
+      "label": "Deployed Projects"
+    },
+    {
+      "value": "20+",
+      "label": "Tech Stack"
+    }
+  ],
+  "skills": [
+    "ASP.NET Core",
+    "Angular",
+    "C#",
+    "Python",
+    "LangChain",
+    "RAG Pipelines",
+    "Docker",
+    "AWS",
+    "CI/CD",
+    "SQL Server",
+    "Entity Framework",
+    "JWT Auth",
+    "CNNs",
+    "Hugging Face",
+    "Power BI",
+    "FastAPI",
+    "Agile / Scrum",
+    "SOLID Design",
+    "UiPath RPA",
+    "Prompt Engineering"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": ".NET Full Stack Developer Intern",
+      "company": "Capgemini",
+      "companyShort": "CAPGEMINI",
+      "type": "Internship",
+      "location": "India",
+      "period": "Dec 2025",
+      "periodEnd": "May 2026",
+      "bullets": [
+        "Engineered 5+ ASP.NET Core Web API microservices following SOLID principles, reducing inter-service coupling and improving maintainability.",
+        "Built Angular frontend modules consuming RESTful APIs, improving end-user task completion flow.",
+        "Secured endpoints with JWT-based authentication and Entity Framework Core ORM with SQL Server, covering role-based access across user tiers.",
+        "Containerized services with Docker and configured Jenkins CI/CD pipelines on AWS, enabling consistent delivery cycles.",
+        "Participated in Agile sprints \u2014 authored technical docs, conducted peer code reviews, and coordinated with QA and design teams."
+      ],
+      "desc": "Full-stack engineering across ASP.NET Core microservices, Angular frontend, Docker, AWS, and Jenkins CI/CD for enterprise applications.",
+      "tech": [
+        "ASP.NET Core",
+        "Angular",
+        "Docker",
+        "AWS",
+        "Jenkins",
+        "JWT",
+        "SQL Server",
+        "Entity Framework"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Generative AI Intern",
+      "company": "Angaar Batch",
+      "companyShort": "ANGAAR BATCH",
+      "type": "Internship",
+      "location": "Remote",
+      "period": "Jul 2025",
+      "periodEnd": "Sep 2025",
+      "bullets": [
+        "Fine-tuned open-source LLMs and built RAG pipelines using LangChain and Hugging Face, improving contextual AI accuracy for domain-specific queries.",
+        "Engineered structured prompts and evaluated output quality across 3+ model configurations to identify highest-accuracy deployment settings."
+      ],
+      "desc": "LLM fine-tuning, RAG pipeline construction, and prompt engineering for domain-specific AI applications.",
+      "tech": [
+        "LangChain",
+        "Hugging Face",
+        "RAG",
+        "Prompt Engineering",
+        "Python",
+        "LLMs"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Data Analytics Intern",
+      "company": "Google (Coursera)",
+      "companyShort": "GOOGLE",
+      "type": "Certification",
+      "location": "Remote",
+      "period": "Jun 2024",
+      "periodEnd": "Aug 2024",
+      "bullets": [
+        "Executed end-to-end analytics workflows \u2014 data extraction via SQL, transformation using R, and visualization in Tableau \u2014 producing dashboards for business reporting.",
+        "Cleaned and restructured datasets with 10,000+ records, applying statistical validation techniques to ensure reporting accuracy."
+      ],
+      "desc": "End-to-end data analytics: SQL extraction, R transformation, Tableau visualization, and statistical validation on large datasets.",
+      "tech": [
+        "SQL",
+        "R",
+        "Tableau",
+        "Power BI",
+        "Data Cleaning",
+        "Statistical Analysis"
+      ]
+    },
+    {
+      "id": 4,
+      "role": "Club President \u2014 Club Literario",
+      "company": "GLA University",
+      "companyShort": "GLA UNIVERSITY",
+      "type": "Leadership",
+      "location": "Mathura, India",
+      "period": "2025",
+      "periodEnd": "2026",
+      "bullets": [
+        "Led GLA University's largest student society with 100+ members, directing programming, events, and membership growth.",
+        "Coordinated IBM Ice Day Technical Fest \u2014 managed 3-day event logistics and speaker coordination."
+      ],
+      "desc": "Led 100+ member student society, directed events, technical fests, and cross-functional team coordination.",
+      "tech": [
+        "Leadership",
+        "Event Management",
+        "Team Coordination",
+        "Public Speaking"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "ParkEase",
+      "subtitle": "Full-Stack Parking Management Platform",
+      "type": "Full Stack",
+      "link": "https://parkease-lemon.vercel.app/",
+      "image": "/assets/project-parkease.png",
+      "tech": [
+        "ASP.NET Core",
+        "Angular",
+        "SQL Server",
+        "Entity Framework",
+        "Docker",
+        "Swagger"
+      ],
+      "desc": "Architected and deployed a full-stack parking management platform supporting real-time slot booking, live availability tracking, integrated payment flow, and RBAC with admin/operator/user tiers."
+    },
+    {
+      "id": 2,
+      "title": "QuantaMeasure",
+      "subtitle": "Unit Conversion Engine on AWS",
+      "type": "Cloud Deployed",
+      "link": "https://quantameasure.vercel.app/",
+      "image": "/assets/project-quantameasure.png",
+      "tech": [
+        "ASP.NET Core",
+        "Angular",
+        "Docker",
+        "AWS",
+        "Jenkins",
+        "JWT",
+        "MSTest"
+      ],
+      "desc": "Type-safe immutable unit conversion engine supporting 20+ categories with zero-loss precision. JWT auth, NLog logging, full Swagger documentation, and Jenkins CI/CD on AWS."
+    },
+    {
+      "id": 3,
+      "title": "RAG-Scraper-AI-GUI",
+      "subtitle": "AI-Powered Knowledge Assistant",
+      "type": "Agentic AI",
+      "link": "https://github.com/AnanyaShukla0007",
+      "image": "/assets/project-rag.png",
+      "tech": [
+        "LangChain",
+        "Hugging Face",
+        "FastAPI",
+        "Python",
+        "Vector Store"
+      ],
+      "desc": "End-to-end RAG application combining targeted web scraping, semantic chunking, and vector-store retrieval to significantly reduce LLM hallucinations. Sub-second context-grounded responses via FastAPI."
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "ParkEase \u2014 Parking Management System",
+      "platform": "Live Demo",
+      "year": "2026",
+      "link": "https://parkease-lemon.vercel.app/",
+      "desc": "Full-stack deployed platform: real-time slot booking, RBAC, normalised SQL schema, Swagger-documented REST API, Docker containerised."
+    },
+    {
+      "id": 2,
+      "title": "QuantaMeasure \u2014 Unit Conversion Engine",
+      "platform": "Live Demo",
+      "year": "2026",
+      "link": "https://quantameasure.vercel.app/",
+      "desc": "Zero-loss precision conversion engine across 20+ unit categories. JWT auth, structured NLog logging, Jenkins CI/CD pipeline, MSTest coverage."
+    },
+    {
+      "id": 3,
+      "title": "RAG-Scraper-AI-GUI",
+      "platform": "GitHub",
+      "year": "2025",
+      "link": "https://github.com/AnanyaShukla0007",
+      "desc": "LangChain + Hugging Face RAG pipeline with web scraping, semantic chunking, and vector-store retrieval. Minimal hallucinations on domain queries."
+    },
+    {
+      "id": 4,
+      "title": "Satellite Image CNN \u2014 Environmental Analysis",
+      "platform": "Research Project",
+      "year": "2025",
+      "link": "https://github.com/AnanyaShukla0007",
+      "desc": "CNN trained on 5,000+ satellite images achieving 87% classification accuracy across land use, deforestation, and water pollution categories."
+    }
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/AnanyaShukla0007"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/ananya-shukla26"
+    },
+    {
+      "label": "Instagram",
+      "href": "https://instagram.com"
+    },
+    {
+      "label": "YouTube",
+      "href": "https://youtube.com"
+    }
+  ]
+}

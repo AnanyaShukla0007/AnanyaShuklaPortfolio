@@ -1,0 +1,22 @@
+{
+  "site": {
+    "tagline": "Portfolio"
+  },
+  "hero": {
+    "taglineHighlight": ".NET Full Stack",
+    "freelanceNote": "Open to full-time roles in Full Stack Development, AI/ML Engineering, and Data Analytics.",
+    "availableLabel": "Available for opportunities",
+    "pills": [".NET Full Stack", "AI/ML Engineer", "Data Analyst"],
+    "specialistStat": { "value": ".NET + AI", "label": "Specialist" }
+  },
+  "interstitial": {
+    "availabilityLabel": "Availability",
+    "basedInLabel": "Based in",
+    "statLabels": ["Internships\ncompleted", "Deployed\nprojects", "AI/ML\nprojects"]
+  },
+  "footer": {
+    "eyebrow": "Available for full-time roles and collaborations",
+    "ctaLines": ["Building systems", "that ship and"],
+    "ctaAccent": "scale."
+  }
+}
