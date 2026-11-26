@@ -152,23 +152,6 @@
   ],
   "projects": [
     {
-      "id": 4,
-      "title": "TerraWatch",
-      "subtitle": "Live 3D Satellite Change Explorer",
-      "type": "Geospatial AI",
-      "link": "https://terrawatch-lacf.onrender.com",
-      "image": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/72.98,18.947,73.15,19.04/1408x768.jpg?collection=sentinel-2-l2a&item=S2C_MSIL2A_20260225T053811_R005_T43QBB_20260225T103810&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0",
-      "tech": [
-        "Sentinel-2",
-        "STAC API",
-        "TiTiler",
-        "MapLibre GL 3D",
-        "Open-Meteo",
-        "JavaScript"
-      ],
-      "desc": "Pick any place on Earth and two dates: TerraWatch pulls real Sentinel-2 imagery, drapes it over 3D terrain and reports how land cover, greenery, water and climate changed, with guided stories like the Navi Mumbai airport build and Chennai's 2019 water crisis."
-    },
-    {
       "id": 5,
       "title": "BharatClaim",
       "subtitle": "Get Back Wrongful Health-Insurance Deductions",
@@ -199,6 +182,23 @@
         "Swagger"
       ],
       "desc": "Architected and deployed a full-stack parking management platform supporting real-time slot booking, live availability tracking, integrated payment flow, and RBAC with admin/operator/user tiers."
+    },
+    {
+      "id": 4,
+      "title": "TerraWatch",
+      "subtitle": "Live 3D Satellite Change Explorer",
+      "type": "Geospatial AI",
+      "link": "https://terrawatch-lacf.onrender.com",
+      "image": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/72.98,18.947,73.15,19.04/1408x768.jpg?collection=sentinel-2-l2a&item=S2C_MSIL2A_20260225T053811_R005_T43QBB_20260225T103810&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0",
+      "tech": [
+        "Sentinel-2",
+        "STAC API",
+        "TiTiler",
+        "MapLibre GL 3D",
+        "Open-Meteo",
+        "JavaScript"
+      ],
+      "desc": "Pick any place on Earth and two dates: TerraWatch pulls real Sentinel-2 imagery, drapes it over 3D terrain and reports how land cover, greenery, water and climate changed, with guided stories like the Navi Mumbai airport build and Chennai's 2019 water crisis."
     },
     {
       "id": 2,
