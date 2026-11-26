@@ -9,14 +9,14 @@
   "description": "B.Tech CSE (AI/ML) graduate with production-level experience in .NET Full Stack engineering and Artificial Intelligence. Capgemini alumna. Ships clean, tested, deployed code.",
   "roles": {
     "short": "Software Engineer",
-    "detailed": ".NET Full Stack Engineer \u00b7 AI/ML Developer \u00b7 Data Analyst"
+    "detailed": ".NET Full Stack Engineer · AI/ML Developer · Data Analyst"
   },
   "location": {
     "based": "Agra, India",
     "availability": "India / Remote"
   },
   "available": true,
-  "bio": "B.Tech graduate in Computer Science (AI/ML) with production-level experience in .NET Full Stack engineering \u2014 ASP.NET Core, Angular, Docker, AWS, CI/CD \u2014 and Artificial Intelligence, including LLMs, RAG pipelines, CNNs, and LangChain. Delivered two deployed applications, three AI/ML projects, and contributed to enterprise systems at Capgemini. Brings precision engineering habits \u2014 SOLID design, unit testing, API documentation \u2014 alongside the ability to move fast on ambiguous problems. Led GLA University's largest student club while shipping code.",
+  "bio": "B.Tech graduate in Computer Science (AI/ML) with production-level experience in .NET Full Stack engineering — ASP.NET Core, Angular, Docker, AWS, CI/CD — and Artificial Intelligence, including LLMs, RAG pipelines, CNNs, and LangChain. Delivered two deployed applications, three AI/ML projects, and contributed to enterprise systems at Capgemini. Brings precision engineering habits — SOLID design, unit testing, API documentation — alongside the ability to move fast on ambiguous problems. Led GLA University's largest student club while shipping code.",
   "stats": [
     {
       "value": "3",
@@ -68,7 +68,7 @@
         "Built Angular frontend modules consuming RESTful APIs, improving end-user task completion flow.",
         "Secured endpoints with JWT-based authentication and Entity Framework Core ORM with SQL Server, covering role-based access across user tiers.",
         "Containerized services with Docker and configured Jenkins CI/CD pipelines on AWS, enabling consistent delivery cycles.",
-        "Participated in Agile sprints \u2014 authored technical docs, conducted peer code reviews, and coordinated with QA and design teams."
+        "Participated in Agile sprints — authored technical docs, conducted peer code reviews, and coordinated with QA and design teams."
       ],
       "desc": "Full-stack engineering across ASP.NET Core microservices, Angular frontend, Docker, AWS, and Jenkins CI/CD for enterprise applications.",
       "tech": [
@@ -115,7 +115,7 @@
       "period": "Jun 2024",
       "periodEnd": "Aug 2024",
       "bullets": [
-        "Executed end-to-end analytics workflows \u2014 data extraction via SQL, transformation using R, and visualization in Tableau \u2014 producing dashboards for business reporting.",
+        "Executed end-to-end analytics workflows — data extraction via SQL, transformation using R, and visualization in Tableau — producing dashboards for business reporting.",
         "Cleaned and restructured datasets with 10,000+ records, applying statistical validation techniques to ensure reporting accuracy."
       ],
       "desc": "End-to-end data analytics: SQL extraction, R transformation, Tableau visualization, and statistical validation on large datasets.",
@@ -130,7 +130,7 @@
     },
     {
       "id": 4,
-      "role": "Club President \u2014 Club Literario",
+      "role": "Club President — Club Literario",
       "company": "GLA University",
       "companyShort": "GLA UNIVERSITY",
       "type": "Leadership",
@@ -139,7 +139,7 @@
       "periodEnd": "2026",
       "bullets": [
         "Led GLA University's largest student society with 100+ members, directing programming, events, and membership growth.",
-        "Coordinated IBM Ice Day Technical Fest \u2014 managed 3-day event logistics and speaker coordination."
+        "Coordinated IBM Ice Day Technical Fest — managed 3-day event logistics and speaker coordination."
       ],
       "desc": "Led 100+ member student society, directed events, technical fests, and cross-functional team coordination.",
       "tech": [
@@ -151,6 +151,23 @@
     }
   ],
   "projects": [
+    {
+      "id": 4,
+      "title": "TerraWatch",
+      "subtitle": "Live 3D Satellite Change Explorer",
+      "type": "Geospatial AI",
+      "link": "https://terrawatch-lacf.onrender.com",
+      "image": "/assets/project-terrawatch.jpg",
+      "tech": [
+        "Sentinel-2",
+        "STAC API",
+        "TiTiler",
+        "MapLibre GL 3D",
+        "Open-Meteo",
+        "JavaScript"
+      ],
+      "desc": "Pick any place on Earth and two dates: TerraWatch pulls real Sentinel-2 imagery, drapes it over 3D terrain and reports how land cover, greenery, water and climate changed, with guided stories like the Navi Mumbai airport build and Chennai's 2019 water crisis."
+    },
     {
       "id": 1,
       "title": "ParkEase",
@@ -188,25 +205,26 @@
     },
     {
       "id": 3,
-      "title": "RAG-Scraper-AI-GUI",
-      "subtitle": "AI-Powered Knowledge Assistant",
-      "type": "Agentic AI",
-      "link": "https://github.com/AnanyaShukla0007",
+      "title": "RAG Scraper",
+      "subtitle": "Ask Questions About Any Web Page or PDF",
+      "type": "Generative AI",
+      "link": "https://rag-scraper-ananya.onrender.com",
       "image": "/assets/project-rag.png",
       "tech": [
-        "LangChain",
-        "Hugging Face",
-        "FastAPI",
-        "Python",
-        "Vector Store"
+        "Transformers.js",
+        "MiniLM Embeddings",
+        "DistilBERT QA",
+        "pdf.js",
+        "Groq Llama 3",
+        "JavaScript"
       ],
-      "desc": "End-to-end RAG application combining targeted web scraping, semantic chunking, and vector-store retrieval to significantly reduce LLM hallucinations. Sub-second context-grounded responses via FastAPI."
+      "desc": "Retrieval-augmented Q&A that runs entirely in the browser: pages and PDFs are chunked, embedded with MiniLM, retrieved by cosine similarity and answered by an extractive QA model, with optional Llama 3 answers via Groq. No server, always live."
     }
   ],
   "publications": [
     {
       "id": 1,
-      "title": "ParkEase \u2014 Parking Management System",
+      "title": "ParkEase — Parking Management System",
       "platform": "Live Demo",
       "year": "2026",
       "link": "https://parkease-lemon.vercel.app/",
@@ -214,7 +232,7 @@
     },
     {
       "id": 2,
-      "title": "QuantaMeasure \u2014 Unit Conversion Engine",
+      "title": "QuantaMeasure — Unit Conversion Engine",
       "platform": "Live Demo",
       "year": "2026",
       "link": "https://quantameasure.vercel.app/",
@@ -222,19 +240,19 @@
     },
     {
       "id": 3,
-      "title": "RAG-Scraper-AI-GUI",
-      "platform": "GitHub",
+      "title": "RAG Scraper — In-Browser RAG",
+      "platform": "Live Demo",
       "year": "2025",
-      "link": "https://github.com/AnanyaShukla0007",
-      "desc": "LangChain + Hugging Face RAG pipeline with web scraping, semantic chunking, and vector-store retrieval. Minimal hallucinations on domain queries."
+      "link": "https://rag-scraper-ananya.onrender.com",
+      "desc": "Web rewrite of an Ollama desktop RAG app: MiniLM embeddings + DistilBERT QA in the browser, PDF/URL ingestion, optional Groq Llama 3."
     },
     {
       "id": 4,
-      "title": "Satellite Image CNN \u2014 Environmental Analysis",
-      "platform": "Research Project",
-      "year": "2025",
-      "link": "https://github.com/AnanyaShukla0007",
-      "desc": "CNN trained on 5,000+ satellite images achieving 87% classification accuracy across land use, deforestation, and water pollution categories."
+      "title": "TerraWatch — Satellite Environmental Monitoring",
+      "platform": "Live Demo",
+      "year": "2026",
+      "link": "https://terrawatch-lacf.onrender.com",
+      "desc": "Grew from a Sundarbans NDVI/SAVI/MNDWI notebook into a live app: before/after Sentinel-2 change detection, land-cover stats in km², 3D terrain and climate context."
     }
   ],
   "socials": [
@@ -245,14 +263,6 @@
     {
       "label": "LinkedIn",
       "href": "https://linkedin.com/in/ananya-shukla26"
-    },
-    {
-      "label": "Instagram",
-      "href": "https://instagram.com"
-    },
-    {
-      "label": "YouTube",
-      "href": "https://youtube.com"
     }
   ]
 }
