@@ -157,7 +157,7 @@
       "subtitle": "Live 3D Satellite Change Explorer",
       "type": "Geospatial AI",
       "link": "https://terrawatch-lacf.onrender.com",
-      "image": "/assets/project-terrawatch.jpg",
+      "image": "https://planetarycomputer.microsoft.com/api/data/v1/item/bbox/72.98,18.947,73.15,19.04/1408x768.jpg?collection=sentinel-2-l2a&item=S2C_MSIL2A_20260225T053811_R005_T43QBB_20260225T103810&assets=visual&asset_bidx=visual%7C1,2,3&nodata=0",
       "tech": [
         "Sentinel-2",
         "STAC API",
