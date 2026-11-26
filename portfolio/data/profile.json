@@ -169,6 +169,21 @@
       "desc": "Pick any place on Earth and two dates: TerraWatch pulls real Sentinel-2 imagery, drapes it over 3D terrain and reports how land cover, greenery, water and climate changed, with guided stories like the Navi Mumbai airport build and Chennai's 2019 water crisis."
     },
     {
+      "id": 5,
+      "title": "BharatClaim",
+      "subtitle": "Get Back Wrongful Health-Insurance Deductions",
+      "type": "Product · Startup",
+      "link": "https://bharatclaim.onrender.com",
+      "image": "/assets/project-bharatclaim.webp",
+      "tech": [
+        "IRDAI Rules Engine",
+        "PostgreSQL (Neon)",
+        "Render",
+        "Document Upload"
+      ],
+      "desc": "For Indians whose health-insurance claim was rejected or short-settled: add three papers and BharatClaim checks every deduction against IRDAI rules, shows how much is recoverable, and writes all three appeal letters — free, no lawyer needed."
+    },
+    {
       "id": 1,
       "title": "ParkEase",
       "subtitle": "Full-Stack Parking Management Platform",
@@ -222,6 +237,14 @@
     }
   ],
   "publications": [
+    {
+      "id": 5,
+      "title": "BharatClaim — Health-Insurance Claim Appeals",
+      "platform": "Live Product",
+      "year": "2026",
+      "link": "https://bharatclaim.onrender.com",
+      "desc": "Checks a claim settlement line by line against IRDAI rules and writes the appeal letters for the policyholder."
+    },
     {
       "id": 1,
       "title": "ParkEase — Parking Management System",
