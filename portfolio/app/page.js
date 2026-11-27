@@ -87,10 +87,14 @@ export default function Home() {
 
     // Inner scroll lanes (e.g. the Beyond timeline) scroll themselves until they hit an edge
     function laneCanScroll(target, dy) {
-      const lane = target.closest && target.closest('[data-scroll-lane]')
-      if (!lane || lane.scrollHeight <= lane.clientHeight + 2) return false
-      if (dy < 0) return lane.scrollTop > 1
-      return lane.scrollTop + lane.clientHeight < lane.scrollHeight - 1
+      let lane = target.closest && target.closest('[data-scroll-lane]')
+      while (lane) {
+        if (lane.scrollHeight > lane.clientHeight + 2) {
+          if (dy < 0 ? lane.scrollTop > 1 : lane.scrollTop + lane.clientHeight < lane.scrollHeight - 1) return true
+        }
+        lane = lane.parentElement && lane.parentElement.closest('[data-scroll-lane]')
+      }
+      return false
     }
 
     // One gesture = one section. Trackpad momentum and small bounces are ignored:
