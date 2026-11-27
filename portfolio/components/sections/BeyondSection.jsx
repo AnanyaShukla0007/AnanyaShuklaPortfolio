@@ -162,7 +162,7 @@ export default function BeyondSection() {
 
   return (
     <section ref={sectionRef} className={styles.section} aria-label="Beyond code">
-      <div className={styles.inner}>
+      <div className={styles.inner} data-scroll-lane>
         {/* ── Left: hobbies ── */}
         <div className={styles.left}>
           <p className={styles.eyebrow} data-reveal>Beyond the code</p>
