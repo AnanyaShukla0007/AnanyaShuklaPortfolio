@@ -1,11 +1,55 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { gsap } from '@/lib/gsap'
 import profile from '@/data/profile.json'
 import styles from '@/styles/sections/BeyondSection.module.css'
 
 const { hobbies, reading, stage } = profile.beyond
+
+/* ── Lightbox: full-screen viewer for a carousel's photos/videos ── */
+function Lightbox({ items, start, label, onClose }) {
+  const [i, setI] = useState(start)
+  const n = items.length
+  const cur = items[i]
+  const go = (d) => setI((x) => (x + d + n) % n)
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowRight') go(1)
+      if (e.key === 'ArrowLeft') go(-1)
+    }
+    window.addEventListener('keydown', onKey)
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = prev }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  return createPortal(
+    <div className={styles.lightbox} role="dialog" aria-modal="true" aria-label={label}
+      onClick={(e) => e.target === e.currentTarget && onClose()} onWheel={(e) => e.stopPropagation()}>
+      <button className={styles.lbClose} onClick={onClose} aria-label="Close">✕</button>
+      <div className={styles.lbStage} onClick={(e) => e.target === e.currentTarget && onClose()}>
+        {cur.type === 'video' ? (
+          <video key={cur.src} className={styles.lbMedia} src={cur.src} poster={cur.poster}
+            controls autoPlay playsInline />
+        ) : (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img key={cur.src} className={`${styles.lbMedia} ${styles.fadeIn}`} src={cur.src} alt={cur.alt || label} />
+        )}
+      </div>
+      {n > 1 && (
+        <>
+          <button className={`${styles.lbArrow} ${styles.lbPrev}`} onClick={() => go(-1)} aria-label="Previous">‹</button>
+          <button className={`${styles.lbArrow} ${styles.lbNext}`} onClick={() => go(1)} aria-label="Next">›</button>
+        </>
+      )}
+      <p className={styles.lbCount}>{label} · {i + 1} / {n}</p>
+    </div>,
+    document.body
+  )
+}
 
 /* ── Carousel: whole photo shown (no head cropping) over a blurred backdrop.
    Runs only while on screen; videos play through, images rotate. ── */
@@ -14,6 +58,7 @@ function Carousel({ items, label }) {
   const [visible, setVisible] = useState(false)
   const [muted, setMuted] = useState(true)
   const [broken, setBroken] = useState({})
+  const [open, setOpen] = useState(false)
   const boxRef = useRef(null)
   const vidRef = useRef(null)
   const n = items.length
@@ -30,25 +75,27 @@ function Carousel({ items, label }) {
 
   // images auto-advance only while visible
   useEffect(() => {
-    if (!visible || cur.type === 'video' || n < 2) return
+    if (!visible || open || cur.type === 'video' || n < 2) return
     const t = setTimeout(() => go(1), 4000)
     return () => clearTimeout(t)
-  }, [i, visible]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [i, visible, open]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // play / pause videos with visibility
   useEffect(() => {
     const v = vidRef.current
     if (!v) return
     v.muted = muted
-    if (visible) v.play().catch(() => {})
+    if (visible && !open) v.play().catch(() => {})
     else v.pause()
-  }, [visible, i, muted])
+  }, [visible, i, muted, open])
 
   const backdrop = cur.type === 'video' ? cur.poster : cur.src
 
   return (
     <div ref={boxRef} className={styles.carousel} aria-roledescription="carousel" aria-label={label}>
-      <div className={styles.stage}>
+      <div className={styles.stage} onClick={(e) => { if (e.target.closest('button')) return; setOpen(true) }}
+        role="button" tabIndex={0} aria-label={`Open ${label} full screen`}
+        onKeyDown={(e) => e.key === 'Enter' && setOpen(true)}>
         {broken[i] ? (
           <div className={styles.placeholder}><span>{label}</span></div>
         ) : (
@@ -86,6 +133,7 @@ function Carousel({ items, label }) {
           ))}
         </div>
       )}
+      {open && <Lightbox items={items} start={i} label={label} onClose={() => setOpen(false)} />}
     </div>
   )
 }
