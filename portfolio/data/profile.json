@@ -12,7 +12,7 @@
     "detailed": ".NET Full Stack Engineer · AI/ML Developer · Data Analyst"
   },
   "location": {
-    "based": "Agra, India",
+    "based": "Delhi NCR, India",
     "availability": "India / Remote"
   },
   "available": true,
@@ -201,6 +201,23 @@
       "desc": "Pick any place on Earth and two dates: TerraWatch pulls real Sentinel-2 imagery, drapes it over 3D terrain and reports how land cover, greenery, water and climate changed, with guided stories like the Navi Mumbai airport build and Chennai's 2019 water crisis."
     },
     {
+      "id": 3,
+      "title": "RAG Scraper",
+      "subtitle": "Ask Questions About Any Web Page or PDF",
+      "type": "Generative AI",
+      "link": "https://rag-scraper-ananya.onrender.com",
+      "image": "/assets/project-rag.png",
+      "tech": [
+        "Transformers.js",
+        "MiniLM Embeddings",
+        "DistilBERT QA",
+        "pdf.js",
+        "Groq Llama 3",
+        "JavaScript"
+      ],
+      "desc": "Retrieval-augmented Q&A that runs entirely in the browser: pages and PDFs are chunked, embedded with MiniLM, retrieved by cosine similarity and answered by an extractive QA model, with optional Llama 3 answers via Groq. No server, always live."
+    },
+    {
       "id": 2,
       "title": "QuantaMeasure",
       "subtitle": "Unit Conversion Engine on AWS",
@@ -217,23 +234,6 @@
         "MSTest"
       ],
       "desc": "Type-safe immutable unit conversion engine supporting 20+ categories with zero-loss precision. JWT auth, NLog logging, full Swagger documentation, and Jenkins CI/CD on AWS."
-    },
-    {
-      "id": 3,
-      "title": "RAG Scraper",
-      "subtitle": "Ask Questions About Any Web Page or PDF",
-      "type": "Generative AI",
-      "link": "https://rag-scraper-ananya.onrender.com",
-      "image": "/assets/project-rag.png",
-      "tech": [
-        "Transformers.js",
-        "MiniLM Embeddings",
-        "DistilBERT QA",
-        "pdf.js",
-        "Groq Llama 3",
-        "JavaScript"
-      ],
-      "desc": "Retrieval-augmented Q&A that runs entirely in the browser: pages and PDFs are chunked, embedded with MiniLM, retrieved by cosine similarity and answered by an extractive QA model, with optional Llama 3 answers via Groq. No server, always live."
     }
   ],
   "publications": [
