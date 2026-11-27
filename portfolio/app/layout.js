@@ -24,7 +24,7 @@ export const metadata = {
     'Data Analyst',
     'Capgemini',
     'GLA University',
-    'Agra India',
+    'Delhi NCR India',
     'Full Stack Engineer',
   ],
   authors: [{ name: 'Ananya Shukla', url: SITE_URL }],
