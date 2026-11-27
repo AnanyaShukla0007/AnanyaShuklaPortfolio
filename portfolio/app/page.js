@@ -84,10 +84,29 @@ export default function Home() {
       })
     }
 
+    // Inner scroll lanes (e.g. the Beyond timeline) scroll themselves until they hit an edge
+    function laneCanScroll(target, dy) {
+      const lane = target.closest && target.closest('[data-scroll-lane]')
+      if (!lane || lane.scrollHeight <= lane.clientHeight + 2) return false
+      if (dy < 0) return lane.scrollTop > 1
+      return lane.scrollTop + lane.clientHeight < lane.scrollHeight - 1
+    }
+
+    // One gesture = one section. Trackpad momentum and small bounces are ignored:
+    // a new move needs a pause in wheel events (gesture end) and enough travel.
+    let wheelAcc = 0, wheelDir = 0, lastWheel = 0, gestureUsed = false
     function onWheel(e) {
+      if (laneCanScroll(e.target, e.deltaY)) return
       e.preventDefault()
-      if (busyRef.current) return
-      goTo(idxRef.current + (e.deltaY > 0 ? 1 : -1))
+      const now = performance.now()
+      const dir = Math.sign(e.deltaY)
+      if (now - lastWheel > 180 || dir !== wheelDir) { wheelAcc = 0; gestureUsed = false; wheelDir = dir }
+      lastWheel = now
+      if (busyRef.current || gestureUsed || !dir) return
+      wheelAcc += Math.abs(e.deltaY)
+      if (wheelAcc < 40) return
+      gestureUsed = true
+      goTo(idxRef.current + dir)
     }
 
     let touchY = 0
@@ -95,6 +114,7 @@ export default function Home() {
     function onTouchEnd(e) {
       const dy = touchY - e.changedTouches[0].clientY
       if (Math.abs(dy) < 40 || busyRef.current) return
+      if (laneCanScroll(e.target, dy)) return
       goTo(idxRef.current + (dy > 0 ? 1 : -1))
     }
 
