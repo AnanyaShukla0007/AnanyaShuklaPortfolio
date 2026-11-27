@@ -56,7 +56,7 @@
 .fadeIn { animation: fade .45s ease; }
 .backdrop {
   position: absolute; inset: -20px; background-size: cover; background-position: center;
-  filter: blur(18px) brightness(0.65) saturate(1.2); transform: translateZ(0);
+  filter: blur(14px) brightness(0.6); transform: translateZ(0) scale(1.05); will-change: transform; contain: strict;
 }
 @keyframes fade { from { opacity: 0 } to { opacity: 1 } }
 .placeholder {

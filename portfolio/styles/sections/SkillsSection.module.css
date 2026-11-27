@@ -48,7 +48,7 @@
   background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px; padding: 1.1rem 1.15rem 1.2rem;
-  backdrop-filter: blur(6px);
+  
   transition: border-color .25s ease, transform .25s ease;
 }
 .card:hover { border-color: rgba(192, 132, 252, 0.55); transform: translateY(-3px); }
