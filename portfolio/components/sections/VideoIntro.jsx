@@ -93,25 +93,22 @@ export default function VideoIntro() {
     const video   = videoRef.current
     if (!section || !video || typeof video.play !== 'function') return
 
-    let isVisible = false
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.intersectionRatio >= 0.95) {
-          if (!isVisible) {
-            isVisible = true
-            video.currentTime = 0
-            video.play().catch(() => {})
-          }
-        } else if (entry.intersectionRatio < 0.5) {
-          isVisible = false
-          if (!video.paused) video.pause()
-        }
-      },
-      { threshold: [0, 0.5, 0.95] }
-    )
-
-    observer.observe(section)
-    return () => observer.disconnect()
+    // The intro is position:sticky, so it never leaves the viewport —
+    // decide by how far <main> has scrolled instead.
+    const main = document.querySelector('main') || document.scrollingElement
+    let isVisible = true
+    const check = () => {
+      const y = main.scrollTop || 0
+      if (y < window.innerHeight * 0.5) {
+        if (!isVisible) { isVisible = true; video.currentTime = 0; video.play().catch(() => {}) }
+      } else if (isVisible) {
+        isVisible = false
+        video.pause()
+      }
+    }
+    main.addEventListener('scroll', check, { passive: true })
+    check()
+    return () => main.removeEventListener('scroll', check)
   }, [])
 
   function dismissHint() {
