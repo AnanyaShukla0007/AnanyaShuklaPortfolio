@@ -91,8 +91,7 @@ export default function VideoIntro() {
   useEffect(() => {
     const section = sectionRef.current
     const video   = videoRef.current
-    const root    = document.querySelector('main')
-    if (!section || !video || !root || typeof video.play !== 'function') return
+    if (!section || !video || typeof video.play !== 'function') return
 
     let isVisible = false
     const observer = new IntersectionObserver(
@@ -103,15 +102,12 @@ export default function VideoIntro() {
             video.currentTime = 0
             video.play().catch(() => {})
           }
-        } else {
-          if (isVisible) {
-            isVisible = false
-            video.pause()
-            video.currentTime = 0
-          }
+        } else if (entry.intersectionRatio < 0.5) {
+          isVisible = false
+          if (!video.paused) video.pause()
         }
       },
-      { root, threshold: [0.95] }
+      { threshold: [0, 0.5, 0.95] }
     )
 
     observer.observe(section)
