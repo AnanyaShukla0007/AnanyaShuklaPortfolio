@@ -109,7 +109,7 @@ function Carousel({ items, label }) {
             ) : (
               // eslint-disable-next-line @next/next/no-img-element
               <img key={cur.src} className={`${styles.media} ${styles.fadeIn}`} src={cur.src}
-                alt={cur.alt || label} loading="lazy" decoding="async"
+                alt={cur.alt || label} loading="eager" decoding="async"
                 onError={() => setBroken((b) => ({ ...b, [i]: true }))} />
             )}
           </>
