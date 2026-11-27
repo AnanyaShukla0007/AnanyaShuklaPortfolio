@@ -293,64 +293,161 @@
       {
         "title": "Anchoring",
         "icon": "🎤",
-        "image": null,
-        "video": null,
-        "desc": "Give me a mic and a full hall. I host college events and fests, keep the energy up between acts, and hold the stage together when the schedule doesn't. It taught me to think on my feet and speak clearly to any crowd.",
-        "tags": [
-          "Event hosting",
-          "Public speaking",
-          "Stage presence"
-        ]
+        "media": [
+          {
+            "type": "video",
+            "src": "/beyond/anchor-1.mp4",
+            "poster": "/beyond/anchor-1.jpg"
+          },
+          {
+            "type": "video",
+            "src": "/beyond/anchor-2.mp4",
+            "poster": "/beyond/anchor-2.jpg"
+          },
+          {
+            "type": "video",
+            "src": "/beyond/anchor-3.mp4",
+            "poster": "/beyond/anchor-3.jpg"
+          },
+          {
+            "type": "video",
+            "src": "/beyond/anchor-4.mp4",
+            "poster": "/beyond/anchor-4.jpg"
+          }
+        ],
+        "desc": "Give me a mic and a full hall. I host college events and fests, keep the energy up between acts and hold the stage together when the schedule doesn't."
       },
       {
         "title": "Dancing",
         "icon": "💃",
-        "image": null,
-        "video": null,
-        "desc": "Dance is how I switch off from code. I've performed on stage at university fests, including IBM ICE Day, and the discipline of rehearsing until a routine is perfect carries straight into how I work.",
-        "tags": [
-          "Stage performances",
-          "IBM ICE Day",
-          "Choreography"
-        ]
-      },
-      {
-        "title": "Reading",
-        "icon": "📚",
-        "image": null,
-        "video": null,
-        "desc": "Always halfway through a book: fiction for the stories and characters, non-fiction for new ideas about people, work and the world. Reading is where a lot of my curiosity comes from.",
-        "tags": [
-          "Fiction",
-          "Non-fiction",
-          "Lifelong learning"
-        ]
+        "media": [
+          {
+            "type": "video",
+            "src": "/beyond/dance-video.mp4",
+            "poster": "/beyond/dance-video.jpg"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/dance-1.webp",
+            "alt": "Ananya performing on stage"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/dance-2.webp",
+            "alt": "Ananya performing on stage"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/dance-3.webp",
+            "alt": "Ananya performing on stage"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/dance-4.webp",
+            "alt": "Ananya performing on stage"
+          }
+        ],
+        "desc": "Classical and semi-classical performances at university events, including IBM ICE Day. Dance is how I switch off from code, and it taught me discipline."
       }
     ],
+    "reading": {
+      "title": "Reading",
+      "icon": "📚",
+      "desc": "Always halfway through a book: fiction for the stories and characters, non-fiction for new ideas about people, work and the world."
+    },
     "stage": [
       {
-        "when": "2025 – 2026",
-        "title": "Club Literario, GLA University",
+        "when": "GLA University",
+        "title": "Club Literario",
         "role": "President",
-        "desc": "Led the university's literary society: planned and ran its events, grew its community and started new initiatives that continued after my term.",
-        "image": null,
-        "video": null
+        "desc": "Led the university's literary society: planned and ran its events, from talks to campus-wide games like the treasure hunt, grew its community and started initiatives that continued after my term.",
+        "media": [
+          {
+            "type": "image",
+            "src": "/beyond/club-1.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-2.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-3.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-4.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-5.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-6.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-7.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-8.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-9.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-10.webp",
+            "alt": "Club Literario event"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/club-11.webp",
+            "alt": "Club Literario event"
+          }
+        ]
       },
       {
-        "when": "GLA University",
+        "when": "GLA University · IBM ICE Day 2K24",
         "title": "IBM ICE Day Technical Fest",
         "role": "Coordinator & dance performer",
-        "desc": "Helped run one of the campus's biggest tech fests, attended by a large crowd, and performed on stage as a dancer at the same event.",
-        "image": null,
-        "video": null
+        "desc": "Helped run the B.Tech CSE specialization programme's tech fest in collaboration with IBM, attended by a large crowd, and performed on stage as a dancer at the same event.",
+        "media": [
+          {
+            "type": "image",
+            "src": "/beyond/ibm-1.webp",
+            "alt": "IBM ICE Day 2K24"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/ibm-2.webp",
+            "alt": "IBM ICE Day 2K24"
+          },
+          {
+            "type": "image",
+            "src": "/beyond/ibm-3.webp",
+            "alt": "IBM ICE Day 2K24"
+          }
+        ]
       },
       {
         "when": "Campus & beyond",
         "title": "Hackathons & competitions",
         "role": "Participant",
         "desc": "Took part in hackathons and inter-college competitions: building under time pressure, pitching ideas and working in fast-moving teams.",
-        "image": null,
-        "video": null
+        "media": []
       }
     ]
   }
