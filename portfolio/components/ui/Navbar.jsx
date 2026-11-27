@@ -17,11 +17,12 @@ const N = profile.projects.length
 const NAV_ITEMS = [
   { label: 'Home',         idx: 0 },
   { label: 'About',        idx: 2 },
-  { label: 'Work',         idx: 3 },
-  { label: 'Experience',   idx: 3 + N },
-  { label: 'Beyond',       idx: 4 + N },
-  { label: 'Impact',       idx: 5 + N },
-  { label: 'Contact',      idx: 7 + N },
+  { label: 'Skills',       idx: 3 },
+  { label: 'Work',         idx: 4 },
+  { label: 'Experience',   idx: 4 + N },
+  { label: 'Beyond',       idx: 5 + N },
+  { label: 'Impact',       idx: 6 + N },
+  { label: 'Contact',      idx: 8 + N },
 ]
 
 function getIST() {
