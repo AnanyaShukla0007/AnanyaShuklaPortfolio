@@ -96,8 +96,10 @@
 .eventMedia .stage { height: clamp(130px, 19vh, 210px); flex: none; }
 
 @media (max-width: 1023px) {
-  .inner { grid-template-columns: 1fr; overflow-y: auto; }
-  .hobbyGrid { min-height: 420px; }
+  .inner { grid-template-columns: 1fr; grid-template-rows: auto auto; align-content: start; overflow-y: auto; overscroll-behavior: contain; }
+  .left, .right { min-height: auto; }
+  .hobbyGrid { flex: none; height: 420px; }
+  .timeline { overflow: visible; }
 }
 @media (max-width: 767px) {
   .section { height: auto; min-height: 100vh; overflow: visible; }
