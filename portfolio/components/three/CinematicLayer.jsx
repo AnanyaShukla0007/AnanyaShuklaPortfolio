@@ -91,8 +91,14 @@ export default function CinematicLayer() {
     let elapsed = 0
     let animId
 
+    // Only render while the hero is on screen and the tab is visible —
+    // otherwise this loop competes with videos further down the page.
+    let onScreen = true
+    const io = new IntersectionObserver(([e]) => { onScreen = e.isIntersecting })
+    if (renderer.domElement.parentElement) io.observe(renderer.domElement.parentElement)
     const animate = (timestamp) => {
       animId = requestAnimationFrame(animate)
+      if (!onScreen || document.hidden) { timer.update(timestamp); timer.getDelta(); return }
       timer.update(timestamp)
       elapsed += timer.getDelta()
 
@@ -113,6 +119,7 @@ export default function CinematicLayer() {
 
     return () => {
       cancelAnimationFrame(animId)
+      io.disconnect()
       window.removeEventListener('mousemove', onMove)
       window.removeEventListener('resize', onResize)
       tex.dispose()
