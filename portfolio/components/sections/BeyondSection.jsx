@@ -100,12 +100,12 @@ function Carousel({ items, label }) {
           <div className={styles.placeholder}><span>{label}</span></div>
         ) : (
           <>
-            {backdrop && <div className={styles.backdrop} style={{ backgroundImage: `url(${backdrop})` }} aria-hidden />}
+            {backdrop && cur.type !== 'video' && <div className={styles.backdrop} style={{ backgroundImage: `url(${backdrop})` }} aria-hidden />}
             {cur.type === 'video' ? (
-              <video key={cur.src} ref={vidRef} className={styles.media} src={visible ? cur.src : undefined}
-                poster={cur.poster} muted playsInline preload="none"
+              <video key={cur.src} ref={vidRef} className={styles.media} src={cur.src}
+                poster={cur.poster} muted playsInline preload="metadata"
                 onEnded={() => (n > 1 ? go(1) : vidRef.current?.play())}
-                onError={() => visible && setBroken((b) => ({ ...b, [i]: true }))} />
+                onError={() => setBroken((b) => ({ ...b, [i]: true }))} />
             ) : (
               // eslint-disable-next-line @next/next/no-img-element
               <img key={cur.src} className={`${styles.media} ${styles.fadeIn}`} src={cur.src}
