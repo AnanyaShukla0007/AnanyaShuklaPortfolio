@@ -7,37 +7,67 @@ import styles from '@/styles/sections/BeyondSection.module.css'
 
 const { hobbies, reading, stage } = profile.beyond
 
-/* ── Carousel: images auto-advance, videos play through then advance ── */
-function Carousel({ items, label, fit = 'cover' }) {
+/* ── Carousel: whole photo shown (no head cropping) over a blurred backdrop.
+   Runs only while on screen; videos play through, images rotate. ── */
+function Carousel({ items, label }) {
   const [i, setI] = useState(0)
+  const [visible, setVisible] = useState(false)
   const [muted, setMuted] = useState(true)
   const [broken, setBroken] = useState({})
+  const boxRef = useRef(null)
   const vidRef = useRef(null)
   const n = items.length
   const cur = items[i]
   const go = (d) => setI((x) => (x + d + n) % n)
 
   useEffect(() => {
-    if (cur.type === 'video') return
-    const t = setTimeout(() => go(1), 3800)
+    const el = boxRef.current
+    if (!el) return
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting), { threshold: 0.35 })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
+  // images auto-advance only while visible
+  useEffect(() => {
+    if (!visible || cur.type === 'video' || n < 2) return
+    const t = setTimeout(() => go(1), 4000)
     return () => clearTimeout(t)
-  }, [i]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [i, visible]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // play / pause videos with visibility
+  useEffect(() => {
+    const v = vidRef.current
+    if (!v) return
+    v.muted = muted
+    if (visible) v.play().catch(() => {})
+    else v.pause()
+  }, [visible, i, muted])
+
+  const backdrop = cur.type === 'video' ? cur.poster : cur.src
 
   return (
-    <div className={styles.carousel} aria-roledescription="carousel" aria-label={label}>
+    <div ref={boxRef} className={styles.carousel} aria-roledescription="carousel" aria-label={label}>
       <div className={styles.stage}>
         {broken[i] ? (
           <div className={styles.placeholder}><span>{label}</span></div>
-        ) : cur.type === 'video' ? (
-          <video key={cur.src} ref={vidRef} className={styles.media} style={{ objectFit: fit }}
-            src={cur.src} poster={cur.poster} autoPlay muted={muted} playsInline preload="metadata"
-            onEnded={() => go(1)} onError={() => setBroken((b) => ({ ...b, [i]: true }))} />
         ) : (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img key={cur.src} className={styles.media} style={{ objectFit: fit }} src={cur.src}
-            alt={cur.alt || label} onError={() => setBroken((b) => ({ ...b, [i]: true }))} />
+          <>
+            {backdrop && <div className={styles.backdrop} style={{ backgroundImage: `url(${backdrop})` }} aria-hidden />}
+            {cur.type === 'video' ? (
+              <video key={cur.src} ref={vidRef} className={styles.media} src={visible ? cur.src : undefined}
+                poster={cur.poster} muted playsInline preload="none"
+                onEnded={() => (n > 1 ? go(1) : vidRef.current?.play())}
+                onError={() => visible && setBroken((b) => ({ ...b, [i]: true }))} />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={cur.src} className={`${styles.media} ${styles.fadeIn}`} src={cur.src}
+                alt={cur.alt || label} loading="lazy" decoding="async"
+                onError={() => setBroken((b) => ({ ...b, [i]: true }))} />
+            )}
+          </>
         )}
-        {cur.type === 'video' && (
+        {cur.type === 'video' && !broken[i] && (
           <button className={styles.sound} onClick={() => setMuted((m) => !m)}
             aria-label={muted ? 'Unmute' : 'Mute'}>{muted ? '🔇' : '🔊'}</button>
         )}
