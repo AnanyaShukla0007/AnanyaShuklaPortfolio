@@ -443,5 +443,96 @@
         ]
       }
     ]
+  },
+  "skillGroups": {
+    "resume": "/Ananya_Shukla_Resume.pdf",
+    "groups": [
+      {
+        "num": "01",
+        "title": "Languages",
+        "blurb": "Day-to-day languages across backend, data and the web.",
+        "items": [
+          "C#",
+          "Python",
+          "Java",
+          "SQL",
+          "JavaScript",
+          "HTML / CSS"
+        ]
+      },
+      {
+        "num": "02",
+        "title": "Backend & APIs",
+        "blurb": "Production .NET services at Capgemini, plus Python APIs.",
+        "items": [
+          "ASP.NET Core",
+          "Web API",
+          "Entity Framework Core",
+          "FastAPI",
+          "REST APIs",
+          "JWT Auth",
+          "SOLID / OOP"
+        ]
+      },
+      {
+        "num": "03",
+        "title": "Frontend",
+        "blurb": "Reusable Angular modules consuming REST APIs.",
+        "items": [
+          "Angular",
+          "JavaScript",
+          "HTML / CSS"
+        ]
+      },
+      {
+        "num": "04",
+        "title": "Data & Databases",
+        "blurb": "Schema design, migrations and analysis dashboards.",
+        "items": [
+          "SQL Server",
+          "MySQL",
+          "PostgreSQL",
+          "Schema design",
+          "EF Core migrations",
+          "Tableau",
+          "Power BI"
+        ]
+      },
+      {
+        "num": "05",
+        "title": "DevOps & Testing",
+        "blurb": "Containerised builds, CI/CD pipelines and tested APIs.",
+        "items": [
+          "Docker",
+          "Jenkins",
+          "CI/CD",
+          "AWS EC2 / S3",
+          "Git",
+          "GitHub",
+          "MSTest",
+          "NUnit",
+          "Postman",
+          "Swagger"
+        ]
+      },
+      {
+        "num": "06",
+        "title": "AI / ML",
+        "blurb": "RAG prototypes, classic ML and in-browser models.",
+        "items": [
+          "Machine learning",
+          "CNNs",
+          "NLP",
+          "RAG",
+          "LangChain",
+          "Hugging Face",
+          "scikit-learn",
+          "NumPy",
+          "Pandas",
+          "Prompt engineering",
+          "UiPath RPA"
+        ]
+      }
+    ]
   }
 }
