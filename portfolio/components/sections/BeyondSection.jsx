@@ -143,7 +143,7 @@ export default function BeyondSection() {
         {/* ── Right: leadership & stage ── */}
         <div className={styles.right}>
           <p className={styles.eyebrow} data-reveal>Leadership & stage</p>
-          <ol className={styles.timeline}>
+          <ol className={styles.timeline} data-scroll-lane>
             {stage.map((s) => (
               <li key={s.title} className={styles.event} data-reveal>
                 <div className={styles.dot} aria-hidden />
