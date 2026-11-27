@@ -33,7 +33,7 @@ function Lightbox({ items, start, label, onClose }) {
       <div className={styles.lbStage} onClick={(e) => e.target === e.currentTarget && onClose()}>
         {cur.type === 'video' ? (
           <video key={cur.src} className={styles.lbMedia} src={cur.src} poster={cur.poster}
-            controls autoPlay playsInline />
+            muted loop autoPlay playsInline />
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
           <img key={cur.src} className={`${styles.lbMedia} ${styles.fadeIn}`} src={cur.src} alt={cur.alt || label} />
@@ -56,7 +56,6 @@ function Lightbox({ items, start, label, onClose }) {
 function Carousel({ items, label }) {
   const [i, setI] = useState(0)
   const [visible, setVisible] = useState(false)
-  const [muted, setMuted] = useState(true)
   const [broken, setBroken] = useState({})
   const [open, setOpen] = useState(false)
   const boxRef = useRef(null)
@@ -84,10 +83,10 @@ function Carousel({ items, label }) {
   useEffect(() => {
     const v = vidRef.current
     if (!v) return
-    v.muted = muted
+    v.muted = true
     if (visible && !open) v.play().catch(() => {})
     else v.pause()
-  }, [visible, i, muted, open])
+  }, [visible, i, open])
 
   const backdrop = cur.type === 'video' ? cur.poster : cur.src
 
@@ -113,10 +112,6 @@ function Carousel({ items, label }) {
                 onError={() => setBroken((b) => ({ ...b, [i]: true }))} />
             )}
           </>
-        )}
-        {cur.type === 'video' && !broken[i] && (
-          <button className={styles.sound} onClick={() => setMuted((m) => !m)}
-            aria-label={muted ? 'Unmute' : 'Mute'}>{muted ? '🔇' : '🔊'}</button>
         )}
         {n > 1 && (
           <>
